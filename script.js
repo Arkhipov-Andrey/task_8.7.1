@@ -145,12 +145,12 @@ function setEqual() {
     gameRun = false;
 
     // Выводим один из вариантов победного сообщения
-    switch (getRandom(3)) {
-        case 1: answerField.innerText = `Я всегда угадываю\n\u{1F60E}`;
+    switch (getRandom(2)) {
+        case 0: answerField.innerText = `Я всегда угадываю\n\u{1F60E}`;
             break;
-        case 2: answerField.innerText = `ЭВРИКА!!!\n\u{1F60E}`;
+        case 1: answerField.innerText = `ЭВРИКА!!!\n\u{1F60E}`;
             break;
-        case 3: answerField.innerText = `Я победил\n\u{1F60E}`;
+        case 2: answerField.innerText = `Я победил\n\u{1F60E}`;
             break;
     }
 }
@@ -170,12 +170,12 @@ function findNumber(event) {
     // Условие выхода из игры по истощению диапазона (перебрали все возможные варианты)
     if (minValue === maxValue) {
         gameRun = false;
-        switch (getRandom(3)) {
-            case 1: answerField.innerText = `Вы загадали неправильное число!\n\u{1F914}`;
+        switch (getRandom(2)) {
+            case 0: answerField.innerText = `Вы загадали неправильное число!\n\u{1F914}`;
                 break;
-            case 2: answerField.innerText = `Я сдаюсь..\n\u{1F92F}`;
+            case 1: answerField.innerText = `Я сдаюсь..\n\u{1F92F}`;
                 break;
-            case 3: answerField.innerText = `Это что-то новенькое..\n\u{1F92F}`;
+            case 2: answerField.innerText = `Это что-то новенькое..\n\u{1F92F}`;
                 break;
         }
 
@@ -208,12 +208,12 @@ function findNumber(event) {
         answerString = stringAnswer(answerNumber);
 
         // Выводим один из вариантов ответов угадываемого числа
-        switch (getRandom(3)) {
-            case 1: answerField.innerText = `Вы загадали число: ${answerString}?`;
+        switch (getRandom(2)) {
+            case 0: answerField.innerText = `Вы загадали число: ${answerString}?`;
                 break;
-            case 2: answerField.innerText = `Похоже на число: ${answerString}?`;
+            case 1: answerField.innerText = `Похоже на число: ${answerString}?`;
                 break;
-            case 3: answerField.innerText = `Допустим это число: ${answerString}?`;
+            case 2: answerField.innerText = `Допустим это число: ${answerString}?`;
                 break;
         }
 
